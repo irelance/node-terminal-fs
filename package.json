@@ -1,0 +1,11 @@
+{
+  "name": "@irelance/terminal-fs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "irelance",
+  "license": "ISC"
+}
