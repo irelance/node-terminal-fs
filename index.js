@@ -62,7 +62,9 @@ function cp(src, dist, autoFixDist = false) {
     }
     mkdir(srcstat.isDirectory() ? dist : path.dirname(dist));
     if (isWindows) {
-        result = exec("copy", [src, dist, '/Y'], {
+        result = srcstat.isDirectory() ? exec("xcopy", [src, dist, '/E', '/R', '/Y'], {
+            shell: process.env.ComSpec,
+        }) : exec("copy", [src, dist, '/Y'], {
             shell: process.env.ComSpec,
         });
     } else {
